@@ -1,0 +1,80 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="root-div">
+
+  <div style = "float:top; height: 58%">
+    <div style ="float: left; width: 50%">
+         <div>
+            <h2>Image Classifier</h2>
+                <div>
+                    <form id="upload-file" method="post" enctype="multipart/form-data">
+                        <label for="imageUpload" class="upload-label">Choose...</label>
+                        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+                    </form>
+                
+                    <div class="image-section" style="display:none;">
+                        <div class="img-preview">
+                            <div id="imagePreview"></div>
+                        </div>
+                    
+                        <div>
+                            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Prediction</button>
+                        </div>  
+                    </div>
+                    
+                    <div class="loader" style="display:none;"></div>
+                    
+                    <h3 id="result">
+                        <span></span>
+                    </h3>
+                
+                </div>
+         </div>
+    </div>
+    
+    <div style="float: right; margin-bottom:20px; margin-top:15px;">
+        
+            <div  id ="solution-div">
+        
+            </div>
+    </div>
+    
+    
+  </div>
+  
+  <div style = "float: bottom; height: 20%;">
+    
+         <div class = "row">
+             
+                <div class = "col">
+                    <button>
+                        <img src="https://th.thgim.com/life-and-style/food/3olmdk/article32455915.ece/ALTERNATES/FREE_660/kimpbananaleaf1" height = "200" width = "220"/>
+                            <div>
+                                <p>Plant Disease Classification</p>
+                            </div>
+                    </button> 
+                </div>
+            
+                <div class = "col">
+                    <button>
+                        <img src="https://th.bing.com/th/id/OIP.RwIYxmjY7DY6_TnFvO_zGQHaE6?pid=ImgDet&rs=1" height = "200" width = "220"/>
+                            <div>
+                                <p> Climate Risk Prediction</p>
+                            </div>
+                    </button>
+                </div>
+            
+                <div class = "col">
+                    <button>
+                        <img src="https://th.bing.com/th/id/R.cc2dca8010425b7a2610e054c1007c3c?rik=v%2bmS7AaEsDMxVQ&riu=http%3a%2f%2fwww.theprepperjournal.com%2fwp-content%2fuploads%2f2016%2f11%2fCropYields.jpg&ehk=Ut2ipKIB42N4swx9XzPi9YXwok%2b7z80kf5t%2fdZq68UM%3d&risl=&pid=ImgRaw&r=0" height = "200" width = "220"/>
+                            <div>
+                                <p>  Crop Yield Prediction</p>
+                            </div>
+                    </button>
+                </div>
+            
+         </div>
+  </div>  
+</div>
+
+{% endblock %}
